@@ -46,6 +46,7 @@ This project allows users to *Add, Update, Delete, Search, and Manage products* 
 
 ## 📁 Project Folder Structure
 
+```
 online-ecommerce-platform/
 │
 ├── src/
@@ -75,3 +76,5 @@ online-ecommerce-platform/
 │   └── ecommerce.sql
 │
 └── README.md
+```
+
