@@ -1,80 +1,192 @@
-# 🛒 Online E-Commerce Platform (Java Swing GUI)
+# 🛒 Online E-Commerce Platform (Java Web Application)
 
-A desktop-based *E-Commerce Management System* built using *JAVA (Swing GUI)* with proper *OOP, **DAO Architecture, **Collections, **Multithreading, and **JDBC database connectivity*.
+A full-stack **E-Commerce Web Application** built using **Java (Servlets & JSP)** following the **MVC architecture**.  
+The project simulates a real-world online shopping platform with authentication, product browsing, cart management, and session handling.
 
-This project allows users to *Add, Update, Delete, Search, and Manage products* with both physical and digital item support.
+This project is developed for **academic (college) purposes** to demonstrate Java Web technologies and clean project structure.
 
 ---
 
 ## 🚀 Features
 
-### ✔ GUI-Based Desktop Application (Swing)
-- Clean and simple user interface  
-- Product table with sorting & searching  
-- Pop-up form dialog for adding/editing products  
-- Separate window components using Swing + AWT layouts  
+### ✅ Web-Based Application (Servlet + JSP)
+- Dynamic and responsive user interface
+- Clean navigation bar with reusable header & footer
+- Modern UI inspired by real e-commerce websites
+- Centralized styling using CSS
 
-### ✔ Product Management
-- Add new products  
-- Edit existing products  
-- Delete products  
-- Search by name / ID  
-- Supports both *PhysicalProduct* & *DigitalProduct*  
-- Automatic price validation & exception handling  
+---
 
-### ✔ OOP Concepts Used
-- *Inheritance* (Product → PhysicalProduct / DigitalProduct)  
-- *Polymorphism* (Sellable interface implemented by different product types)  
-- *Abstraction* (DAO layer, service layer)  
-- *Encapsulation* (All fields private with getters/setters)  
-- *Custom Exceptions* (InvalidProductException)
+### ✅ User Authentication & Validation
+- Secure login system using Servlets
+- Server-side **email format validation**
+- Password length validation
+- Proper error messages for invalid inputs
+- Session-based authentication handling
 
-### ✔ Collections & Generics
-- Manages product list using *ArrayList\<Product>*  
-- Generic models used in table rendering  
+---
 
-### ✔ Multithreading
-- Background AutoSaveThread automatically saves product cache to DB.  
-- Continuous database sync without blocking UI.  
+### ✅ Product Management
+- Display of multiple products (e.g. laptops, electronics)
+- Product name, price, description & image placeholders
+- Dynamic rendering using **JSP + JSTL**
+- Grid-based product layout similar to Amazon-style UI
 
-### ✔ Database (JDBC + MySQL)
-- DB connection through DAO classes  
-- PreparedStatements used for secure queries  
-- Configurable via db.properties
+---
+
+### ✅ Shopping Cart Functionality
+- Add products to cart
+- Quantity selection
+- Session-based cart storage
+- Cart summary with total calculation
+
+---
+
+### ✅ Guest Mode Support
+- Users can browse products without login
+- Login required only for checkout
+- Smooth and user-friendly navigation flow
+
+---
+
+## 🧠 Core Concepts Used
+
+### 🔹 Java Web Technologies
+- Servlets & Servlet lifecycle
+- JSP & JSTL tags
+- HTTP Request/Response handling
+- URL mapping using `@WebServlet`
+- Session management (`HttpSession`)
+
+---
+
+### 🔹 OOP Principles
+- Encapsulation (private fields with getters/setters)
+- Abstraction using service layer
+- Modular and reusable components
+- Clean separation of concerns (MVC)
+
+---
+
+## 🧰 Technology Stack
+
+- **Java (JDK 17)**
+- **Servlet API**
+- **JSP & JSTL**
+- **HTML5**
+- **CSS3**
+- **Apache Tomcat 9**
+- **Maven**
+- **IntelliJ IDEA**
 
 ---
 
 ## 📁 Project Folder Structure
-
 ```
 online-ecommerce-platform/
 │
-├── src/
-│   ├── model/
-│   │   ├── Product.java
-│   │   ├── DigitalProduct.java
-│   │   ├── PhysicalProduct.java
-│   │   └── Sellable.java
-│   │
-│   ├── dao/
-│   │   ├── ProductDAO.java
-│   │   └── DBConnection.java
-│   │
-│   ├── service/
-│   │   └── ECommerceService.java
-│   │
-│   ├── ui/
-│   │   └── ProjectGUI.java
-│   │
-│   ├── util/
-│   │   └── AutoSaveThread.java
-│   │
-│   ├── db.properties
-│   └── Main.java
+├── web-app/
+│ ├── src/
+│ │ └── main/
+│ │ ├── java/
+│ │ │ └── com.onlineecommerce.web/
+│ │ │ ├── HomeServlet.java
+│ │ │ ├── LoginServlet.java
+│ │ │ ├── ProductServlet.java
+│ │ │ ├── CartServlet.java
+│ │ │ └── LogoutServlet.java
+│ │ │
+│ │ └── webapp/
+│ │ ├── assets/
+│ │ │ ├── css/
+│ │ │ │ ├── theme.css
+│ │ │ │ ├── styles.css
+│ │ │ │ ├── auth.css
+│ │ │ │ └── products.css
+│ │ │ ├── images/
+│ │ │ └── js/
+│ │ │
+│ │ ├── landing.jsp
+│ │ ├── login.jsp
+│ │ ├── products.jsp
+│ │ ├── cart.jsp
+│ │ ├── error.jsp
+│ │ │
+│ │ └── WEB-INF/
+│ │ ├── web.xml
+│ │ └── includes/
+│ │ ├── header.jsp
+│ │ └── footer.jsp
 │
-├── database/
-│   └── ecommerce.sql
-│
+├── pom.xml
 └── README.md
 ```
 
+---
+
+## ▶️ How to Run the Project
+
+### ✅ Prerequisites
+- JDK 17 installed
+- Apache Tomcat 9
+- IntelliJ IDEA
+- Maven configured
+
+---
+
+### ▶️ Steps to Execute
+1. Open the project in **IntelliJ IDEA**
+2. Configure **Apache Tomcat Server**
+3. Deploy `web-app : war exploded`
+4. Start the server
+5. Open browser and visit:
+
+
+---
+
+## 🧪 Validation & Error Handling
+
+- Email format validation
+- Password length validation
+- User-friendly error messages
+- Safe request forwarding
+- Centralized error page handling
+
+---
+
+## 🎨 UI & User Experience
+
+- Responsive layout
+- Clean typography
+- Center-aligned landing section
+- Consistent color theme
+- Professional UI suitable for demos and viva
+
+---
+
+## 🚀 Future Enhancements
+
+- User registration module
+- Database-driven product management
+- Order placement system
+- Payment gateway integration
+- Admin dashboard
+
+---
+
+## 👨‍💻 Author
+
+**Name:** Umesh Kumar  
+**Course:** B.Tech – Computer Science & Engineering
+
+---
+
+## ✅ Conclusion
+
+This project demonstrates:
+- Java Web Application development
+- MVC architecture
+- Clean UI integration
+- Proper validation & session handling
+
+**Fully functional and perfect for college submission.**
