@@ -1,0 +1,17 @@
+# ===== Build output =====
+target/
+*/target/
+
+# ===== IntelliJ / IDE =====
+.idea/
+*.iml
+
+# ===== Logs =====
+logs/
+*.log
+
+# ===== OS =====
+.DS_Store
+
+# ===== Secrets =====
+db.properties
